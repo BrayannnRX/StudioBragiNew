@@ -219,14 +219,14 @@ if (headerContactBtn) {
 // NAVEGAÇÃO PARA PÁGINAS DE ARTISTAS
 // ==========================================
 
-// Mapear nomes de artistas para suas páginas (estrutura: Artistas/Nome/nome.html)
+// Mapear nomes de artistas para suas páginas (seguindo a estrutura de pastas)
 const artistPages = {
-    'Raymel': '../Raymel/raymel.html',
-    'Pedro Santos': '../Pedro/pedro.html',
-    'Júlia Almeida': '../Julia/julia.html',
-    'Ana Silva': '../Ana/ana.html',
-    'Rafael Torres': '../Rafael/rafael.html',
-    'Lucas Vieira': '../Lucas/lucas.html'
+    'Raymel': 'Artistas/Raymel/raymel.html',
+    'Lynna': 'Artistas/Lynna/lynna.html',
+    'Kindão': 'Artistas/Kindao/kindao.html',
+    'Fabão': 'Artistas/Fabao/fabao.html',
+    'Danit': 'Artistas/Danit/danit.html',
+    'Viktor Souza': 'Artistas/Viktor/viktor.html',
 };
 
 // Botões "Ver Perfil" na seção "Outros Artistas"

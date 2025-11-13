@@ -241,10 +241,9 @@ const artistPages = {
     'Raymel': 'Artistas/Raymel/raymel.html',
     'Lynna': 'Artistas/Lynna/lynna.html',
     'Kindão': 'Artistas/Kindao/kindao.html',
+    'Fabão': 'Artistas/Fabao/fabao.html',
+    'Danit': 'Artistas/Danit/danit.html',
     'Viktor Souza': 'Artistas/Viktor/viktor.html',
-    'Rafael Torres': 'Artistas/Rafael/rafael.html',
-    'Júlia Mendes': 'Artistas/Julia/julia.html',
-    'Júlia Almeida': 'Artistas/Julia/julia.html'
 };
 
 // Botões "Ver Perfil" dos artistas
