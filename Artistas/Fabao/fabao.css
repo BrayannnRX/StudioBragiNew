@@ -247,7 +247,7 @@ body {
     inset: 0;
     background-image: var(--hero-image, url('fabao.jpg')); /* ✅ imagem variável */
     background-size: cover;
-    background-position: center 50px; /* ✅ posição ajustável */
+    background-position: center 10px; /* ✅ posição ajustável */
     background-repeat: no-repeat;
     filter: brightness(0.45);
 }
@@ -581,11 +581,22 @@ body {
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
 }
 
+/* Imagem do artista (atualizado) */
 .artist-image {
     width: 100%;
-    height: 280px;
+    height: 320px;
     overflow: hidden;
     position: relative;
+}
+
+/* Faz TODAS as fotos ajustarem perfeitamente */
+.artist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* mantém proporção sem distorcer */
+    object-position: center; /* foca no centro da imagem */
+    display: block;
+    transition: transform 0.5s ease;
 }
 
 .artist-image-placeholder {

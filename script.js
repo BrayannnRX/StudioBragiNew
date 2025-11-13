@@ -236,7 +236,6 @@ if (ctaBtn) {
 // NAVEGAÇÃO PARA PÁGINAS DE ARTISTAS
 // ==========================================
 
-// Mapear nomes de artistas para suas páginas (seguindo a estrutura de pastas)
 const artistPages = {
     'Raymel': 'Artistas/Raymel/raymel.html',
     'Lynna': 'Artistas/Lynna/lynna.html',
@@ -253,27 +252,27 @@ document.querySelectorAll('.btn-artist-primary').forEach(btn => {
         const artistCard = btn.closest('.artist-card');
         const artistName = artistCard ? artistCard.querySelector('.artist-name')?.textContent.trim() : '';
         
-        // Redirecionar para a página do artista
         if (artistPages[artistName]) {
             window.location.href = artistPages[artistName];
         } else {
-            // Fallback: redirecionar para página genérica
             console.warn(`Página não encontrada para: ${artistName}`);
             alert(`Página do artista "${artistName}" em construção!`);
         }
     });
 });
 
-// Botão "Conheça os Artistas" no hero
-const knowArtistsBtn = document.querySelector('.btn-secondary');
-if (knowArtistsBtn && knowArtistsBtn.textContent.includes('Conheça os Artistas')) {
-    knowArtistsBtn.addEventListener('click', (e) => {
+// ==========================================
+// BOTÕES "CONTATO" DOS CARDS DE ARTISTAS
+// ==========================================
+
+const artistContactButtons = document.querySelectorAll('.btn-artist-secondary');
+
+artistContactButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
         e.preventDefault();
-        const artistsSection = document.querySelector('#artistas');
-        if (artistsSection) {
-            artistsSection.scrollIntoView({ behavior: 'smooth' });
-        }
+        const artistName = button.closest('.artist-card')?.querySelector('.artist-name')?.textContent || 'o artista';
+        openWhatsApp(`Olá! Gostaria de mais informações sobre a contratação de ${artistName}.`);
     });
-}
+});
 
 console.log('Studio Bragi - Site carregado com sucesso! 🎵');

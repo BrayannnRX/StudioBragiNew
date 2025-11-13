@@ -216,36 +216,66 @@ if (headerContactBtn) {
 }
 
 // ==========================================
-// ==========================================
-// NAVEGAÇÃO PARA PÁGINAS DE ARTISTAS
+// NAVEGAÇÃO + GERAÇÃO DE CARDS ALEATÓRIOS (CORRIGIDO DEFINITIVO)
 // ==========================================
 
-// Mapear nomes de artistas para suas páginas (seguindo a estrutura de pastas)
 const artistPages = {
     'Raymel': 'Artistas/Raymel/raymel.html',
     'Lynna': 'Artistas/Lynna/lynna.html',
-    'Kindão': 'Artistas/Kindao/kindao.html',
-    'Fabão': 'Artistas/Fabao/fabao.html',
+    'Kindao': 'Artistas/Kindao/kindao.html',
+    'Fabao': 'Artistas/Fabao/fabao.html',
     'Danit': 'Artistas/Danit/danit.html',
     'Viktor Souza': 'Artistas/Viktor/viktor.html',
 };
 
-// Botões "Ver Perfil" na seção "Outros Artistas"
-document.querySelectorAll('.btn-view-profile').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const artistCard = btn.closest('.artist-card');
-        const artistName = artistCard ? artistCard.querySelector('.artist-name')?.textContent.trim() : '';
-        
-        // Redirecionar para a página do artista
-        if (artistPages[artistName]) {
-            window.location.href = artistPages[artistName];
-        } else {
-            console.warn(`Página não encontrada para: ${artistName}`);
-            alert(`Página do artista "${artistName}" em construção!`);
-        }
+// Função principal
+function generateRandomArtistCards() {
+    const container = document.querySelector('.artists-grid');
+    if (!container) return;
+
+    // Detecta qual artista está sendo exibido
+    const currentPath = window.location.pathname.toLowerCase();
+    const currentArtist = Object.keys(artistPages).find(name => {
+        const fileName = artistPages[name].split('/').pop().replace('.html', '').toLowerCase();
+        return currentPath.includes(fileName);
     });
-});
+
+    // Filtra os outros artistas
+    const otherArtists = Object.keys(artistPages).filter(a => a !== currentArtist);
+    const selected = otherArtists.sort(() => Math.random() - 0.5).slice(0, 3);
+
+    // Corrige caminho relativo (subir 2 pastas se estiver dentro de /Artistas/Nome/)
+    const depthFix = currentPath.includes('/artistas/') ? '../../' : '';
+
+    container.innerHTML = '';
+
+    selected.forEach(name => {
+        const htmlPath = depthFix + artistPages[name];
+        const imgPath = htmlPath.replace('.html', '.jpg'); // mesmo nome, extensão diferente
+
+        const card = document.createElement('div');
+        card.classList.add('artist-card');
+        card.innerHTML = `
+            <div class="artist-image">
+                <img src="${imgPath}" alt="${name}" class="artist-thumb" onerror="this.src='${depthFix}assets/img/placeholder.jpg'">
+            </div>
+            <div class="artist-info">
+                <h3 class="artist-name">${name}</h3>
+                <p class="artist-role">Artista</p>
+                <a href="${htmlPath}" class="btn-view-profile">Ver Perfil</a>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+// Executa ao carregar
+document.addEventListener('DOMContentLoaded', generateRandomArtistCards);
+
+
+// Executa quando o DOM estiver pronto
+document.addEventListener('DOMContentLoaded', generateRandomArtistCards);
+
 
 // Corrigir links de navegação do header para voltar à página principal
 document.querySelectorAll('.nav-menu a').forEach(link => {
