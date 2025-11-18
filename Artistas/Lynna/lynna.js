@@ -222,10 +222,11 @@ if (headerContactBtn) {
 const artistPages = {
     'Raymel': 'Artistas/Raymel/raymel.html',
     'Lynna': 'Artistas/Lynna/lynna.html',
-    'Kindao': 'Artistas/Kindao/kindao.html',
-    'Fabao': 'Artistas/Fabao/fabao.html',
+    'Kindão': 'Artistas/Kindao/kindao.html',
+    'Fabão': 'Artistas/Fabao/fabao.html',
     'Danit': 'Artistas/Danit/danit.html',
     'Viktor Souza': 'Artistas/Viktor/viktor.html',
+    'Nuylly': 'Artistas/Nuylly/nuylly.html',
 };
 
 // Função principal

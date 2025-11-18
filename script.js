@@ -243,6 +243,7 @@ const artistPages = {
     'Fabão': 'Artistas/Fabao/fabao.html',
     'Danit': 'Artistas/Danit/danit.html',
     'Viktor Souza': 'Artistas/Viktor/viktor.html',
+    'Nuylly': 'Artistas/Nuylly/nuylly.html',
 };
 
 // Botões "Ver Perfil" dos artistas
