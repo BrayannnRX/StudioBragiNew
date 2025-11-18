@@ -263,7 +263,7 @@ body {
         to bottom,
         rgb(0, 0, 0) 0%,
         rgba(0, 0, 0, 0) 50%,
-        rgba(0, 0, 0, 0) 100%
+        rgba(0, 0, 0, 0.267) 100%
     );
 }
 
@@ -293,18 +293,18 @@ body {
     border-radius: 50px;
     font-size: 0.875rem;
     color: #10B981;
-    margin-bottom: 15rem;
+    margin-bottom: 10rem;
     animation: fadeInDown 0.8s ease;
     backdrop-filter: blur(10px);
 }
 
 /* Título */
 .hero-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
-    color: #FFFFFF;
+    color: #ffffff;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 0.8s ease 0.2s both;
 }
@@ -887,6 +887,36 @@ body {
     object-position: center center;
     display: block;
     border-radius: 20px;
+}
+
+/* Carousel Section*/
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.carousel-image.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.carousel-image.previous {
+    opacity: 0;
+    transform: translateX(-100%);
 }
 
 /* CTA Section */

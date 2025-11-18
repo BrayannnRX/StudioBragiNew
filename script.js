@@ -109,6 +109,36 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Carrossel automático com slide lateral
+let currentImageIndex = 0;
+const images = document.querySelectorAll('.carousel-image');
+const totalImages = images.length;
+
+function changeImage() {
+    // Adiciona classe 'previous' na imagem atual (ela sai para a esquerda)
+    images[currentImageIndex].classList.add('previous');
+    images[currentImageIndex].classList.remove('active');
+    
+    // Avança para a próxima imagem
+    currentImageIndex = (currentImageIndex + 1) % totalImages;
+    
+    // Adiciona classe 'active' na nova imagem (ela entra da direita)
+    images[currentImageIndex].classList.add('active');
+    images[currentImageIndex].classList.remove('previous');
+    
+    // Remove a classe 'previous' das outras imagens após a transição
+    setTimeout(() => {
+        images.forEach((img, index) => {
+            if (index !== currentImageIndex) {
+                img.classList.remove('previous');
+            }
+        });
+    }, 800);
+}
+
+// Inicia o carrossel automático a cada 2.7 segundos
+setInterval(changeImage, 3500);
+
 // Adicionar efeito de ripple nos botões
 const addRippleEffect = (button) => {
     button.addEventListener('click', function(e) {
