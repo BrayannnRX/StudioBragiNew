@@ -136,6 +136,21 @@ function changeImage() {
     }, 800);
 }
 
+// Botão "Conheça os Artistas" que rola até a seção
+const knowArtistsBtn = document.querySelector('.btn-secondary');
+if (knowArtistsBtn && knowArtistsBtn.textContent.includes('Conheça os Artistas')) {
+    knowArtistsBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const artistsSection = document.querySelector('#artistas') || document.querySelector('.artists');
+        if (artistsSection) {
+            artistsSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+}
+
 // Inicia o carrossel automático a cada 2.7 segundos
 setInterval(changeImage, 3500);
 
