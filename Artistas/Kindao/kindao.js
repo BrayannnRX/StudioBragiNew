@@ -1,3 +1,18 @@
+// ==========================================
+// DETECÇÃO DE HASH NA URL (NOVO!)
+// ==========================================
+// Detecta se veio de outra página com hash e rola até a seção
+window.addEventListener('load', function() {
+    if (window.location.hash) {
+        const section = document.querySelector(window.location.hash);
+        if (section) {
+            setTimeout(() => {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+    }
+});
+
 // Smooth Scroll para links de navegação
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -216,7 +231,7 @@ if (headerContactBtn) {
 }
 
 // ==========================================
-// NAVEGAÇÃO + GERAÇÃO DE CARDS ALEATÓRIOS (ATUALIZADO PARA INDEX.HTML)
+// NAVEGAÇÃO + GERAÇÃO DE CARDS ALEATÓRIOS (CORRIGIDO!)
 // ==========================================
 
 const artistData = {
@@ -227,10 +242,6 @@ const artistData = {
     'Lynna': {
         folder: 'Lynna',
         image: 'lynna.jpg'
-    },
-    'Kindão': {
-        folder: 'Kindao',
-        image: 'kindao.jpg'
     },
     'Fabão': {
         folder: 'Fabao',
@@ -275,7 +286,8 @@ function generateRandomArtistCards() {
 
     selected.forEach(name => {
         const data = artistData[name];
-        const htmlPath = `../${data.folder}/index.html`;
+        // ✅ CORRIGIDO: Sem index.html, apenas a pasta com /
+        const htmlPath = `../${data.folder}/`;
         const imgPath = `../${data.folder}/${data.image}`;
 
         const card = document.createElement('div');
@@ -297,11 +309,17 @@ function generateRandomArtistCards() {
 // Executa quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', generateRandomArtistCards);
 
+// ==========================================
+// CORREÇÃO DOS LINKS DE NAVEGAÇÃO
+// ==========================================
+
 // Corrigir links de navegação do header para voltar à página principal
 document.querySelectorAll('.nav-menu a').forEach(link => {
     const href = link.getAttribute('href');
     if (href && href.includes('index.html')) {
-        link.setAttribute('href', '../../index.html' + (href.includes('#') ? href.substring(href.indexOf('#')) : ''));
+        // ✅ CORRIGIDO: Remove index.html e usa apenas #
+        const hash = href.includes('#') ? href.substring(href.indexOf('#')) : '';
+        link.setAttribute('href', '../../' + hash);
     }
 });
 
@@ -310,7 +328,8 @@ const backButton = document.querySelector('.btn-back');
 if (backButton) {
     backButton.addEventListener('click', (e) => {
         e.preventDefault();
-        window.location.href = '../../index.html#artistas';
+        // ✅ CORRIGIDO: Sem index.html
+        window.location.href = '../../#artistas';
     });
 }
 
@@ -319,7 +338,8 @@ const logoLink = document.querySelector('.logo');
 if (logoLink) {
     logoLink.style.cursor = 'pointer';
     logoLink.addEventListener('click', () => {
-        window.location.href = '../../index.html';
+        // ✅ CORRIGIDO: Sem index.html
+        window.location.href = '../../';
     });
 }
 

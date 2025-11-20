@@ -247,7 +247,7 @@ if (aboutSection) {
 // ==========================================
 
 // Número de WhatsApp do Studio Bragi (formato internacional sem + e sem espaços)
-const WHATSAPP_NUMBER = '5521987252542'; // Altere para o número real
+const WHATSAPP_NUMBER = '5521987252542';
 
 // Função para abrir WhatsApp
 function openWhatsApp(message = '') {
@@ -286,17 +286,17 @@ if (ctaBtn) {
 }
 
 // ==========================================
-// NAVEGAÇÃO PARA PÁGINAS DE ARTISTAS
+// NAVEGAÇÃO PARA PÁGINAS DE ARTISTAS (CORRIGIDO!)
 // ==========================================
 
 const artistPages = {
-    'Raymel': 'Artistas/Raymel/index.html',
-    'Lynna': 'Artistas/Lynna/index.html',
-    'Kindão': 'Artistas/Kindao/index.html',
-    'Fabão': 'Artistas/Fabao/index.html',
-    'Danit': 'Artistas/Danit/index.html',
-    'Viktor Souza': 'Artistas/Viktor/index.html',
-    'Nuylly': 'Artistas/Nuylly/index.html',
+    'Raymel': 'Artistas/Raymel/',
+    'Lynna': 'Artistas/Lynna/',
+    'Kindão': 'Artistas/Kindao/',
+    'Fabão': 'Artistas/Fabao/',
+    'Danit': 'Artistas/Danit/',
+    'Viktor Souza': 'Artistas/Viktor/',
+    'Nuylly': 'Artistas/Nuylly/',
 };
 
 // Botões "Ver Perfil" dos artistas
