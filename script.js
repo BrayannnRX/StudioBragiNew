@@ -1,4 +1,4 @@
-// Smooth Scroll para links de navegação
+// Smooth Scroll para links de navegação do header
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
