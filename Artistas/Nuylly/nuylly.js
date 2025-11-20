@@ -187,7 +187,7 @@ document.querySelectorAll('.ideal-item').forEach((item, index) => {
 // ==========================================
 
 // Número de WhatsApp do Studio Bragi
-const WHATSAPP_NUMBER = '5521987252542'; // Altere para o número real
+const WHATSAPP_NUMBER = '5521987252542';
 
 // Função para abrir WhatsApp
 function openWhatsApp(message = '') {
@@ -216,48 +216,73 @@ if (headerContactBtn) {
 }
 
 // ==========================================
-// NAVEGAÇÃO + GERAÇÃO DE CARDS ALEATÓRIOS (CORRIGIDO DEFINITIVO)
+// NAVEGAÇÃO + GERAÇÃO DE CARDS ALEATÓRIOS (ATUALIZADO PARA INDEX.HTML)
 // ==========================================
 
-const artistPages = {
-    'Raymel': 'Artistas/Raymel/raymel.html',
-    'Lynna': 'Artistas/Lynna/lynna.html',
-    'Kindao': 'Artistas/Kindao/kindao.html',
-    'Fabao': 'Artistas/Fabao/fabao.html',
-    'Danit': 'Artistas/Danit/danit.html',
-    'Viktor Souza': 'Artistas/Viktor/viktor.html',
+const artistData = {
+    'Raymel': {
+        folder: 'Raymel',
+        image: 'raymel.jpg'
+    },
+    'Lynna': {
+        folder: 'Lynna',
+        image: 'lynna.jpg'
+    },
+    'Kindão': {
+        folder: 'Kindao',
+        image: 'kindao.jpg'
+    },
+    'Fabão': {
+        folder: 'Fabao',
+        image: 'fabao.jpg'
+    },
+    'Danit': {
+        folder: 'Danit',
+        image: 'danit.jpg'
+    },
+    'Viktor Souza': {
+        folder: 'Viktor',
+        image: 'viktor.jpg'
+    },
+    'Nuylly': {
+        folder: 'Nuylly',
+        image: 'nuylly.jpeg'
+    }
 };
 
-// Função principal
+// Função principal para gerar cards aleatórios
 function generateRandomArtistCards() {
     const container = document.querySelector('.artists-grid');
     if (!container) return;
 
-    // Detecta qual artista está sendo exibido
+    // Detecta qual artista está sendo exibido pela pasta
     const currentPath = window.location.pathname.toLowerCase();
-    const currentArtist = Object.keys(artistPages).find(name => {
-        const fileName = artistPages[name].split('/').pop().replace('.html', '').toLowerCase();
-        return currentPath.includes(fileName);
-    });
+    let currentArtist = null;
+    
+    // Identifica o artista atual pela pasta
+    for (const [name, data] of Object.entries(artistData)) {
+        if (currentPath.includes(`/${data.folder.toLowerCase()}/`)) {
+            currentArtist = name;
+            break;
+        }
+    }
 
     // Filtra os outros artistas
-    const otherArtists = Object.keys(artistPages).filter(a => a !== currentArtist);
+    const otherArtists = Object.keys(artistData).filter(a => a !== currentArtist);
     const selected = otherArtists.sort(() => Math.random() - 0.5).slice(0, 3);
-
-    // Corrige caminho relativo (subir 2 pastas se estiver dentro de /Artistas/Nome/)
-    const depthFix = currentPath.includes('/artistas/') ? '../../' : '';
 
     container.innerHTML = '';
 
     selected.forEach(name => {
-        const htmlPath = depthFix + artistPages[name];
-        const imgPath = htmlPath.replace('.html', '.jpg'); // mesmo nome, extensão diferente
+        const data = artistData[name];
+        const htmlPath = `../${data.folder}/index.html`;
+        const imgPath = `../${data.folder}/${data.image}`;
 
         const card = document.createElement('div');
         card.classList.add('artist-card');
         card.innerHTML = `
             <div class="artist-image">
-                <img src="${imgPath}" alt="${name}" class="artist-thumb" onerror="this.src='${depthFix}assets/img/placeholder.jpg'">
+                <img src="${imgPath}" alt="${name}" class="artist-thumb" onerror="this.onerror=null; this.src='../../assets/placeholder.jpg';">
             </div>
             <div class="artist-info">
                 <h3 class="artist-name">${name}</h3>
@@ -269,13 +294,8 @@ function generateRandomArtistCards() {
     });
 }
 
-// Executa ao carregar
-document.addEventListener('DOMContentLoaded', generateRandomArtistCards);
-
-
 // Executa quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', generateRandomArtistCards);
-
 
 // Corrigir links de navegação do header para voltar à página principal
 document.querySelectorAll('.nav-menu a').forEach(link => {

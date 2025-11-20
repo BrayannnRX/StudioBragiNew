@@ -61,6 +61,14 @@ document.querySelectorAll('.artist-card').forEach((card, index) => {
     observer.observe(card);
 });
 
+// Observar cards de produções
+document.querySelectorAll('.production-card').forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+    observer.observe(card);
+});
+
 // Animação dos números das estatísticas
 const animateStats = () => {
     const stats = document.querySelectorAll('.stat-number');
@@ -151,7 +159,7 @@ if (knowArtistsBtn && knowArtistsBtn.textContent.includes('Conheça os Artistas'
     });
 }
 
-// Inicia o carrossel automático a cada 2.7 segundos
+// Inicia o carrossel automático a cada 3.5 segundos
 setInterval(changeImage, 3500);
 
 // Adicionar efeito de ripple nos botões
@@ -282,13 +290,13 @@ if (ctaBtn) {
 // ==========================================
 
 const artistPages = {
-    'Raymel': 'Artistas/Raymel/raymel.html',
-    'Lynna': 'Artistas/Lynna/lynna.html',
-    'Kindão': 'Artistas/Kindao/kindao.html',
-    'Fabão': 'Artistas/Fabao/fabao.html',
-    'Danit': 'Artistas/Danit/danit.html',
-    'Viktor Souza': 'Artistas/Viktor/viktor.html',
-    'Nuylly': 'Artistas/Nuylly/nuylly.html',
+    'Raymel': 'Artistas/Raymel/index.html',
+    'Lynna': 'Artistas/Lynna/index.html',
+    'Kindão': 'Artistas/Kindao/index.html',
+    'Fabão': 'Artistas/Fabao/index.html',
+    'Danit': 'Artistas/Danit/index.html',
+    'Viktor Souza': 'Artistas/Viktor/index.html',
+    'Nuylly': 'Artistas/Nuylly/index.html',
 };
 
 // Botões "Ver Perfil" dos artistas

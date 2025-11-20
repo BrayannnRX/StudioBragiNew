@@ -498,21 +498,6 @@ body {
     }
 }
 
-/* ========================================
-   📝 GUIA DE AJUSTE RÁPIDO
-   ========================================
-   
-   Para descer TODO o conteúdo (badge + textos + botões):
-   Altere o valor de "margin-top" em ".hero-content"
-   
-   margin-top: 80px;   ← Atual
-   margin-top: 100px;  ← Mais embaixo
-   margin-top: 120px;  ← Ainda mais
-   margin-top: 60px;   ← Menos
-   margin-top: 0px;    ← Centralizado
-   
-   ======================================== */
-
 .btn-primary {
     background-color: #10B981;
     color: #FFFFFF;
@@ -675,6 +660,199 @@ body {
     line-height: 1.7;
 }
 
+/* =========== Productions Section ============== */
+.productions {
+    padding: 8rem 0;
+    background-color: #0F0F0F;
+}
+
+.productions .section-title {
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.6),
+        0 0 20px rgba(255, 255, 255, 0.4),
+        0 0 30px rgba(255, 255, 255, 0.2),
+        0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+.productions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.production-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+
+.production-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(16, 185, 129, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.production-card:hover::before {
+    opacity: 1;
+}
+
+.production-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(16, 185, 129, 0.5);
+    box-shadow: 0 25px 60px rgba(16, 185, 129, 0.2);
+}
+
+.production-image {
+    width: 100%;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.production-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.production-card:hover .production-image img {
+    transform: scale(1.1);
+}
+
+.production-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+}
+
+.production-card:hover .production-overlay {
+    opacity: 1;
+}
+
+.production-overlay svg {
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease;
+}
+
+.production-card:hover .production-overlay svg {
+    transform: scale(1.2);
+}
+
+.production-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.production-card:hover .production-title {
+    color: #10B981;
+}
+
+/* ==========================================
+   🎨 AJUSTE INDIVIDUAL DE IMAGENS
+   ========================================== */
+
+/* Produção 1 - Pessoa Melhor */
+.production-1 .production-image img {
+    object-position: 0px center; /* horizontal vertical */
+}
+
+/* Produção 2 - Ô Cupido */
+.production-2 .production-image img {
+    object-position: center 1px;
+}
+
+/* Produção 3 - A Dor do Adeus */
+.production-3 .production-image img {
+    object-position: center 0.1px;
+}
+
+/* Produção 4 - A Luz da Manhã */
+.production-4 .production-image img {
+    object-position: center center;
+}
+
+/* Produção 5 - Eu Venci */
+.production-5 .production-image img {
+    object-position: 0px center;
+}
+
+/* Produção 6 - Vida Loca */
+.production-6 .production-image img {
+    object-position: center 0px;
+}
+
+/* Animação de entrada */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .productions {
+        padding: 5rem 0;
+    }
+
+    .productions-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .production-image {
+        height: 240px;
+    }
+
+    .production-title {
+        font-size: 1rem;
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .production-image {
+        height: 200px;
+    }
+}
+
 /* Artists Section */
 .artists {
     padding: 8rem 0;
@@ -701,7 +879,7 @@ body {
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
 }
 
-/* Imagem do artista (atualizado) */
+/* Imagem do artista */
 .artist-image {
     width: 100%;
     height: 320px;
@@ -713,14 +891,17 @@ body {
 .artist-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;      /* mantém proporção sem distorcer */
-    object-position: center; /* foca no centro da imagem */
+    object-fit: cover;
+    object-position: center;
     display: block;
     transition: transform 0.5s ease;
 }
 
 .artist-image-placeholder { 
-    width: 100%; height: 100%; transition: transform 0.5s ease; }
+    width: 100%; 
+    height: 100%; 
+    transition: transform 0.5s ease; 
+}
 
 /* Efeito de zoom ao passar o mouse */
 .artist-card:hover .artist-image img {
@@ -728,13 +909,13 @@ body {
 }
 
 .artist-info {
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 0.75rem 1.5rem; /* 🎯 Padding inferior reduzido de 1.5rem para 1rem */
 }
 
 .artist-name {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
     color: #FFFFFF;
 }
 
@@ -742,24 +923,12 @@ body {
     font-size: 0.95rem;
     color: #10B981;
     font-weight: 600;
-    margin-bottom: 0.25rem;
-}
-
-.artist-genre {
-    font-size: 0.875rem;
-    color: #6B7280;
-    margin-bottom: 0.75rem;
-}
-
-.artist-description {
-    font-size: 0.9rem;
-    color: #9CA3AF;
-    margin-bottom: 1.25rem;
-    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .artist-actions {
     display: flex;
+    margin-bottom: 0px;
     gap: 0.75rem;
 }
 

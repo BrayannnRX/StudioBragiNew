@@ -245,9 +245,9 @@ body {
 .artist-hero-bg {
     position: absolute;
     inset: 0;
-    background-size: cover;
     background-image: var(--hero-image, url('nuyllybg.jpeg')); /* ✅ imagem variável */
-    background-position: center -600px; /* ✅ posição ajustável */
+    background-size: cover;
+    background-position: center; /* ✅ posição ajustável */
     background-repeat: no-repeat;
     filter: brightness(0.45);
 }
