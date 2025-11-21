@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', generateRandomArtistCards);
 // ==========================================
 
 // Corrigir links de navegação do header para voltar à página principal
-document.querySelectorAll('.nav-menu a').forEach(link => {
+document.querySelectorAll('a[href*="index.html"]').forEach(link => {
     const href = link.getAttribute('href');
     if (href && href.includes('index.html')) {
         // ✅ CORRIGIDO: Remove index.html e usa apenas #
