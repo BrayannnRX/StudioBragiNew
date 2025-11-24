@@ -297,6 +297,7 @@ const artistPages = {
     'Danit': 'Artistas/Danit/',
     'Viktor Souza': 'Artistas/Viktor/',
     'Nuylly': 'Artistas/Nuylly/',
+    'Pinduka': 'Artistas/Pinduka/',
 };
 
 // Botões "Ver Perfil" dos artistas

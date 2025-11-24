@@ -247,6 +247,10 @@ const artistData = {
     'Nuylly': {
         folder: 'Nuylly',
         image: 'nuylly.jpeg'
+    },
+    'Pinduka': {
+        folder: 'Nuylly',
+        image: 'pinduka.jpeg'
     }
 };
 

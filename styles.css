@@ -887,6 +887,11 @@ body {
     position: relative;
 }
 
+/* Ajuste exclusivo da imagem do Pinduka */
+.artist-card.artist-pinduka .artist-image img {
+    object-position: center 30%; /* Sobe o enquadramento */
+}
+
 /* Faz TODAS as fotos ajustarem perfeitamente */
 .artist-image img {
     width: 100%;
