@@ -549,6 +549,96 @@ body {
     line-height: 1.6;
 }
 
+.soundcloud-player{
+    margin-bottom: 10px;
+}
+
+.spotify-card {
+    display: flex;
+    background: #ffffffef;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #1db954;
+    height: 166px;
+}
+.spotify-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(29, 185, 84, 0.3);
+    border-color: #1ed760;
+}
+.spotify-album-cover {
+    width: 166px;
+    height: 166px;
+    flex-shrink: 0;
+    background: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.spotify-album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.spotify-info {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+}
+.spotify-icon {
+    margin-bottom: 4px;
+}
+.spotify-text {
+    width: 100%;
+}
+.spotify-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #1db954;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    letter-spacing: -0.3px;
+}
+.spotify-artist {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+.spotify-cta {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #1db954;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    letter-spacing: -0.3px;
+}
+@media (max-width: 600px) {
+    .spotify-card {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .spotify-album-cover {
+        width: 100%;
+    }
+    
+    .spotify-info {
+        padding: 20px;
+    }
+}
+
 /* =========== Other Artists Section ================ */
 .other-artists {
     padding: 6rem 0 8rem;
