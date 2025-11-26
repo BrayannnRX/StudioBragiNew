@@ -256,7 +256,7 @@ const artistData = {
         image: 'nuylly.jpeg'
     },
     'Pinduka': {
-        folder: 'Nuylly',
+        folder: 'Pinduka',
         image: 'pinduka.jpeg'
     }
 };

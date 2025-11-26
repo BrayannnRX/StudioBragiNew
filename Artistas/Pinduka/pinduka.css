@@ -247,7 +247,7 @@ body {
     inset: 0;
     background-image: var(--hero-image, url('Pinduka.jpeg')); /* ✅ imagem variável */
     background-size: cover;
-    background-position: center -350px; /* ✅ posição ajustável */
+    background-position: center -150px; /* ✅ posição ajustável */
     background-repeat: no-repeat;
     filter: brightness(0.45);
 }
