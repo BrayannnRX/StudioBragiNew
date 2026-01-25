@@ -814,6 +814,11 @@ body {
     object-position: center 0px;
 }
 
+/* Produção 7 - Me Fez te Amar */
+.production-7 .production-image img {
+    object-position: center -60px;
+}
+
 /* Animação de entrada */
 @keyframes fadeInScale {
     from {
