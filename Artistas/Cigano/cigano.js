@@ -247,9 +247,9 @@ const artistData = {
         folder: 'Kindao',
         image: 'kindao.jpg'
     },
-        'De90': {
+    'De90': {
         folder: 'De90',
-        image: 'kindao.jpg'
+        image: 'De90.jpeg'
     }
 };
 

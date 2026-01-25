@@ -249,7 +249,7 @@ const artistData = {
     },
     'De90': {
         folder: 'De90',
-        image: 'kindao.jpg'
+        image: 'De90.jpeg'
     }
 };
 
