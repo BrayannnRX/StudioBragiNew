@@ -298,6 +298,8 @@ const artistPages = {
     'Viktor Souza': 'Artistas/Viktor/',
     'Nuylly': 'Artistas/Nuylly/',
     'Pinduka': 'Artistas/Pinduka/',
+    'Cigano': 'Artistas/Cigano/',
+    'DE 90': 'Artistas/De90/'
 };
 
 // Botões "Ver Perfil" dos artistas

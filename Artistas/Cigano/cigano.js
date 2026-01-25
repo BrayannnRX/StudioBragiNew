@@ -239,19 +239,18 @@ const artistData = {
         folder: 'Raymel',
         image: 'raymel.jpg'
     },
+    'Lynna': {
+        folder: 'Lynna',
+        image: 'lynna.jpg'
+    },
     'Kindão': {
         folder: 'Kindao',
         image: 'kindao.jpg'
-    },
-       'Cigano': {
-        folder: 'Cigano',
-        image: 'cigano.jpeg'
     },
         'De90': {
         folder: 'De90',
         image: 'kindao.jpg'
     }
-    
 };
 
 // Função principal para gerar cards aleatórios

@@ -243,25 +243,13 @@ const artistData = {
         folder: 'Lynna',
         image: 'lynna.jpg'
     },
-    'Fabão': {
-        folder: 'Fabao',
-        image: 'fabao.jpg'
+    'Cigano': {
+        folder: 'Cigano',
+        image: 'cigano.jpeg'
     },
-    'Danit': {
-        folder: 'Danit',
-        image: 'danit.jpg'
-    },
-    'Viktor Souza': {
-        folder: 'Viktor',
-        image: 'viktor.jpg'
-    },
-    'Nuylly': {
-        folder: 'Nuylly',
-        image: 'nuylly.jpeg'
-    },
-    'Pinduka': {
-        folder: 'Pinduka',
-        image: 'pinduka.jpeg'
+    'De90': {
+        folder: 'De90',
+        image: 'kindao.jpg'
     }
 };
 
