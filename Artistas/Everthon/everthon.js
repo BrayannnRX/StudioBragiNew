@@ -251,10 +251,6 @@ const artistData = {
         folder: 'De90',
         image: 'De90.jpeg'
     },
-    'Kindao': {
-        folder: 'Kindao',
-        image: 'kindao.jpg'
-    }
 };
 
 // Função principal para gerar cards aleatórios

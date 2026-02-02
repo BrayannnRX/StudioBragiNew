@@ -253,8 +253,8 @@ const artistData = {
     },
     'Everthon': {
         folder: 'Everthon',
-        image: 'Everthon.jpeg'
-    }
+        image: 'everthon.jpeg'
+    },
 };
 
 // Função principal para gerar cards aleatórios
