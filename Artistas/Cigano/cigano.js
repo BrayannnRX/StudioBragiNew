@@ -250,6 +250,10 @@ const artistData = {
     'De90': {
         folder: 'De90',
         image: 'De90.jpeg'
+    },
+    'Everthon': {
+        folder: 'Everthon',
+        image: 'Everthon.jpeg'
     }
 };
 

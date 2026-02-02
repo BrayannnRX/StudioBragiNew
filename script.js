@@ -299,7 +299,8 @@ const artistPages = {
     'Nuylly': 'Artistas/Nuylly/',
     'Pinduka': 'Artistas/Pinduka/',
     'Cigano': 'Artistas/Cigano/',
-    'DE 90': 'Artistas/De90/'
+    'DE 90': 'Artistas/De90/',
+    'Everthon': 'Artistas/Everthon/'
 };
 
 // Botões "Ver Perfil" dos artistas

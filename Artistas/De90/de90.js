@@ -251,6 +251,10 @@ const artistData = {
         folder: 'Cigano',
         image: 'cigano.jpeg'
     },
+    'Everthon': {
+        folder: 'Everthon',
+        image: 'Everthon.jpeg'
+    }
 };
 
 // Função principal para gerar cards aleatórios
