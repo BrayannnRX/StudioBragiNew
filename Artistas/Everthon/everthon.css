@@ -245,7 +245,7 @@ body {
 .artist-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: var(--hero-image, url('/Artistas/Everthon/Everthonn.jpeg')); /* ✅ imagem variável */
+    background-image: var(--hero-image, url('/Artistas/Everthon/Everthon.jpeg')); /* ✅ imagem variável */
     background-size: cover;
     background-position: center 90px; /* ✅ posição ajustável */
     background-repeat: no-repeat;
