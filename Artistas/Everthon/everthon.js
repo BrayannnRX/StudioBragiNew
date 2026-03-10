@@ -235,10 +235,6 @@ if (headerContactBtn) {
 // ==========================================
 
 const artistData = {
-    'Raymel': {
-        folder: 'Raymel',
-        image: 'raymel.jpg'
-    },
     'Lynna': {
         folder: 'Lynna',
         image: 'lynna.jpg'
