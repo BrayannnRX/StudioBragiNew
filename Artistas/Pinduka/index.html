@@ -4,45 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinduka - Studio Bragi</title>
-    <link rel="stylesheet" href="pinduka.css">
+    <!-- Modern Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to the main style and artist specific style -->
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../artist.css">
 </head>
 <body>
     <!-- Header/Navigation -->
-    <header class="header">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <img src="../../StudioLogo.png" alt="">
-                    </div>
-                    <div class="logo-text">
-                        <div class="logo-title">Studio Bragi</div>
-                        <div class="logo-subtitle">Music Production</div>
-                    </div>
+    <header class="header" id="header">
+        <div class="container nav-wrapper">
+            <a href="../../index.html" class="logo">
+                <div class="logo-icon glass-effect">
+                    <img src="../../StudioLogo.png" alt="Studio Bragi Logo">
                 </div>
-                    <nav class="nav-menu">
-                        <a href="../../index.html">Início</a>
-                        <a href="../../index.html#artistas">Artistas</a>
-                        <a href="../../index.html#producoes">Produções</a>
-                        <a href="../../index.html#servicos">Serviços</a>
-                        <a href="../../index.html#sobre">Sobre</a>
-                    </nav>
-                <div class="nav-actions">
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/studiobragi/" class="social-icon" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="18" cy="6" r="1" fill="currentColor"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.youtube.com/@studiobragi" class="social-icon" target="_blank">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23.498 6.186a2.997 2.997 0 0 0-2.112-2.12C19.67 3.5 12 3.5 12 3.5s-7.67 0-9.386.566a2.997 2.997 0 0 0-2.112 2.12A31.01 31.01 0 0 0 .5 12a31.01 31.01 0 0 0 .002 5.814 2.997 2.997 0 0 0 2.112 2.12C4.33 20.5 12 20.5 12 20.5s7.67 0 9.386-.566a2.997 2.997 0 0 0 2.112-2.12A31.01 31.01 0 0 0 23.5 12a31.01 31.01 0 0 0-.002-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
-                        </svg>
-                        </a>
-                    </div>
-                    <button class="btn-contato">Contato</button>
+                <div class="logo-text">
+                    <div class="logo-title">Studio Bragi</div>
+                    <div class="logo-subtitle">Music Production</div>
+                </div>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="../../index.html" class="nav-link">Início</a>
+                <a href="../../index.html#artistas" class="nav-link active">Artistas</a>
+                <a href="../../index.html#producoes" class="nav-link">Produções</a>
+                <a href="../../index.html#servicos" class="nav-link">Serviços</a>
+                <a href="../../index.html#sobre" class="nav-link">Sobre</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <div class="social-icons hidden-mobile">
+                    <a href="https://www.instagram.com/studiobragi/" class="social-icon" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@studiobragi" class="social-icon" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <a href="https://wa.me/5521987252542" target="_blank" class="btn btn-primary pulse-effect">Contato</a>
+                <div class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -50,14 +58,11 @@
 
     <!-- Artist Hero Section -->
     <section class="artist-hero">
-        <div class="artist-hero-bg"></div>
+        <div class="artist-hero-bg" style="background-image: url('o amorbg.png'); background-size: cover; background-position: center top; filter: brightness(0.3) saturate(1.2); opacity: 0.8;"></div>
         <div class="container">
-            <div class="artist-hero-content">
+            <div class="artist-hero-content reveal scale-up">
                 <a href="../../index.html#artistas" class="btn-back">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Voltar
+                    <i class="fas fa-arrow-left"></i> Voltar aos Artistas
                 </a>
                 <h1 class="artist-hero-title">Pinduka</h1>
                 <p class="artist-hero-subtitle">Cantor</p>
@@ -66,91 +71,62 @@
     </section>
 
     <!-- Artist Details Section -->
-    <section class="artist-details">
+    <section class="artist-details section-padding">
         <div class="container">
             <div class="details-grid">
                 <!-- Left Column - Information -->
                 <div class="details-left">
-
-                    <div class="detail-card">
-                        <h2 class="detail-title">Confira as Músicas de Nosso Artista</h2>
-                            <div class="soundcloud-player">
+                    <div class="detail-card reveal fade-right">
+                        <h2 class="detail-title">Músicas em Destaque</h2>
+                        
+                        <div class="music-container">
+                            <!-- SoundCloud Player 1 -->
+                            <div class="soundcloud-player box-glow">
                                 <iframe
-                                width="100%"
-                                height="166"
-                                scrolling="no"
-                                frameborder="no"
-                                allow="autoplay"
-                                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1923743870&color=%2300a859&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+                                    width="100%"
+                                    height="166"
+                                    scrolling="no"
+                                    frameborder="no"
+                                    allow="autoplay"
+                                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1923743870&color=%2300a859&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
+                                    style="border-radius: 8px;">
                                 </iframe>
                             </div>
 
-                            <!-- Spotify Card -->
-                            <a href="https://open.spotify.com/intl-pt/track/5fj873EEaBtc04H6xcOqKr?si=tyNKB2FCSgakpT7znagsVg&nd=1&dlsi=6e2a7df7be5847f2" target="_blank" class="spotify-card">
-                                <div class="spotify-album-cover">
-                                    <img src="pindukabg.png" alt="Capa do Álbum">
-                                </div>
-                                <div class="spotify-info">
-                                    <div class="spotify-icon">
-                                        <svg viewBox="0 0 24 24" width="32" height="32" fill="#1db954">
-                                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                                        </svg>
-                                    </div>
-                                    <div class="spotify-text">
-                                        <h3 class="spotify-title">Parte do Problema</h3>
-                                        <p class="spotify-artist">Pinduka</p>
-                                        <p class="spotify-cta">Ouvir no Spotify</p>
-                                    </div>
-                                </div>
+                            <!-- Spotify Link 1 -->
+                            <a href="https://open.spotify.com/intl-pt/track/5fj873EEaBtc04H6xcOqKr?si=tyNKB2FCSgakpT7znagsVg&nd=1&dlsi=6e2a7df7be5847f2" target="_blank" class="spotify-card box-glow" style="display: flex; align-items: center; padding: 15px; background: #121212; border-radius: 8px; margin-bottom: 20px; text-decoration: none; color: white;">
+                                <i class="fab fa-spotify" style="color: #1DB954; font-size: 24px; margin-right: 15px;"></i>
+                                <span style="font-family: var(--font-primary); font-weight: 500;">Ouvir música 1 no Spotify</span>
                             </a>
 
-                            <!-- Spotify Card -->
-                            <a href="https://open.spotify.com/intl-pt/track/2ZrVdfmOVqnzVOM9z1yOUk?si=FqyXMk4PSuG6vtNDBMsx1g&nd=1&dlsi=7ce9d2f6030f4a3d" target="_blank" class="spotify-card">
-                                <div class="spotify-album-cover">
-                                    <img src="o amorbg.png" alt="Capa do Álbum">
-                                </div>
-                                <div class="spotify-info">
-                                    <div class="spotify-icon">
-                                        <svg viewBox="0 0 24 24" width="32" height="32" fill="#1db954">
-                                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                                        </svg>
-                                    </div>
-                                    <div class="spotify-text">
-                                        <h3 class="spotify-title">O Amor</h3>
-                                        <p class="spotify-artist">Pinduka</p>
-                                        <p class="spotify-cta">Ouvir no Spotify</p>
-                                    </div>
-                                </div>
+                            <!-- Spotify Link 2 -->
+                            <a href="https://open.spotify.com/intl-pt/track/2ZrVdfmOVqnzVOM9z1yOUk?si=FqyXMk4PSuG6vtNDBMsx1g&nd=1&dlsi=7ce9d2f6030f4a3d" target="_blank" class="spotify-card box-glow" style="display: flex; align-items: center; padding: 15px; background: #121212; border-radius: 8px; margin-bottom: 20px; text-decoration: none; color: white;">
+                                <i class="fab fa-spotify" style="color: #1DB954; font-size: 24px; margin-right: 15px;"></i>
+                                <span style="font-family: var(--font-primary); font-weight: 500;">Ouvir música 2 no Spotify</span>
                             </a>
+                        </div>
                     </div>
 
-                    
-
                     <!-- Ideal For -->
-                    <div class="detail-card">
+                    <div class="detail-card reveal fade-right" data-delay="100">
                         <h2 class="detail-title">Ideal Para</h2>
                         <div class="ideal-for-grid">
                             <div class="ideal-item">
                                 <div class="ideal-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="8" r="5" stroke="#10B981" stroke-width="2"/>
-                                        <path d="M3 21C3 17.134 7.029 14 12 14C16.971 14 21 17.134 21 21" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
+                                    <i class="fas fa-glass-cheers"></i>
                                 </div>
                                 <div class="ideal-content">
                                     <h3 class="ideal-title">Festas Privadas</h3>
-                                    <p class="ideal-description">Aniversários e comemorações especiais</p>
+                                    <p class="ideal-description">Aniversários, celebrações particulares e eventos familiares especiais com energia contagiante.</p>
                                 </div>
                             </div>
                             <div class="ideal-item">
                                 <div class="ideal-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path d="M9 18V5L21 3V16M9 18C9 19.6569 7.65685 21 6 21C4.34315 21 3 19.6569 3 18C3 16.3431 4.34315 15 6 15C7.65685 15 9 16.3431 9 18ZM21 16C21 17.6569 19.6569 19 18 19C16.3431 19 15 17.6569 15 16C15 14.3431 16.3431 13 18 13C19.6569 13 21 14.3431 21 16Z" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
+                                    <i class="fas fa-compact-disc"></i>
                                 </div>
                                 <div class="ideal-content">
                                     <h3 class="ideal-title">Shows e Apresentações</h3>
-                                    <p class="ideal-description">Eventos públicos e festivais</p>
+                                    <p class="ideal-description">Shows ao vivo, eventos públicos, casas noturnas e festivais de música.</p>
                                 </div>
                             </div>
                         </div>
@@ -159,24 +135,19 @@
 
                 <!-- Right Column - Contact Card -->
                 <div class="details-right">
-                    <div class="contact-card">
-                        <h2 class="contact-title">Contrate Pinduka</h2>
-                        <p class="contact-description">
-                            Entre em contato para discutir seu evento e receber um orçamento personalizado.
-                        </p>
-                        
-                        <div class="contact-actions">
-                            <a href="https://wa.me/5511999999999" class="btn-whatsapp">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                    <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Falar no WhatsApp
+                    <div class="contact-card-wrapper">
+                        <div class="contact-card reveal fade-left">
+                            <h2 class="contact-title">Contrate Pinduka</h2>
+                            <p class="contact-description">
+                                Garanta a melhor atração para o seu projeto. Entre em contato e vamos discutir os detalhes.
+                            </p>
+                            
+                            <a href="https://wa.me/5521987252542" target="_blank" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp fa-lg"></i> Falar no WhatsApp
                             </a>
-                        </div>
 
-                        <div class="contact-info">
                             <div class="info-row">
-                                <span class="info-label">Resposta:</span>
+                                <span class="info-label">Tempo de Resposta:</span>
                                 <span class="info-value">Rápida</span>
                             </div>
                             <div class="info-row">
@@ -187,14 +158,11 @@
                                 <span class="info-label">Localização:</span>
                                 <span class="info-value">Rio de Janeiro, RJ</span>
                             </div>
-                        </div>
 
-                        <div class="contact-note">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" stroke="#10B981" stroke-width="2"/>
-                                <path d="M12 16V12M12 8H12.01" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                            <p>Entre em contato com antecedência para garantir a disponibilidade na data do seu evento. Nossos artistas têm agenda concorrida!</p>
+                            <div class="contact-note">
+                                <i class="fas fa-info-circle text-accent"></i>
+                                <p>Sugerimos agendar com antecedência para garantir a disponibilidade na data do seu evento.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,41 +170,55 @@
         </div>
     </section>
 
-    <!-- Other Artists Section -->
-    <section class="other-artists">
+    
+    <!-- Outros Artistas Section -->
+    <section class="artistas section-padding" style="padding-top: 0;">
         <div class="container">
-            <h2 class="section-title">Outros Artistas</h2>
-            <div class="artists-grid">
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <div class="artist-image-placeholder" style="background: linear-gradient(135deg, #6B7280 0%, #374151 100%);"></div>
+            <h2 class="section-title reveal fade-up" style="margin-bottom: 2rem;">Outros Artistas</h2>
+            <div class="artistas-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+
+                <!-- Cigano -->
+                <div class="artist-card reveal fade-up" data-delay="100">
+                    <div class="artist-image-wrapper">
+                        <img src="../../Artistas/Cigano/CiganoFotoPerfil.jpeg" alt="Cigano" class="artist-image" style="width: 100%; height: 300px; object-fit: cover;">
+                        <div class="artist-overlay"></div>
                     </div>
-                    <div class="artist-info">
-                        <h3 class="artist-name">Marina Costa</h3>
-                        <p class="artist-role">Vocalista</p>
-                        <a href="artist-marina.html" class="btn-view-profile">Ver Perfil</a>
+                    <div class="artist-info frosted-glass-inner">
+                        <h3 class="artist-name">Cigano</h3>
+                        <p class="artist-role">Cantor</p>
+                        <div class="artist-actions">
+                            <a href="../../Artistas/Cigano/index.html" class="btn btn-sm btn-accent w-full">Ver Perfil</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <div class="artist-image-placeholder" style="background: linear-gradient(135deg, #4C1D95 0%, #2E1065 100%);"></div>
+                <!-- DE 90 -->
+                <div class="artist-card reveal fade-up" data-delay="200">
+                    <div class="artist-image-wrapper">
+                        <img src="../../Artistas/De90/De90.jpeg" alt="DE 90" class="artist-image" style="width: 100%; height: 300px; object-fit: cover;">
+                        <div class="artist-overlay"></div>
                     </div>
-                    <div class="artist-info">
-                        <h3 class="artist-name">Pedro Santos</h3>
-                        <p class="artist-role">DJ e Producer</p>
-                        <a href="artist-pedro.html" class="btn-view-profile">Ver Perfil</a>
+                    <div class="artist-info frosted-glass-inner">
+                        <h3 class="artist-name">DE 90</h3>
+                        <p class="artist-role">Cantor</p>
+                        <div class="artist-actions">
+                            <a href="../../Artistas/De90/index.html" class="btn btn-sm btn-accent w-full">Ver Perfil</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="artist-card">
-                    <div class="artist-image">
-                        <div class="artist-image-placeholder" style="background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);"></div>
+                <!-- Everthon -->
+                <div class="artist-card reveal fade-up" data-delay="300">
+                    <div class="artist-image-wrapper">
+                        <img src="../../Artistas/Everthon/Everthon.jpeg" alt="Everthon" class="artist-image" style="width: 100%; height: 300px; object-fit: cover;">
+                        <div class="artist-overlay"></div>
                     </div>
-                    <div class="artist-info">
-                        <h3 class="artist-name">Júlia Almeida</h3>
-                        <p class="artist-role">Cantora</p>
-                        <a href="artist-julia.html" class="btn-view-profile">Ver Perfil</a>
+                    <div class="artist-info frosted-glass-inner">
+                        <h3 class="artist-name">Everthon</h3>
+                        <p class="artist-role">Cantor</p>
+                        <div class="artist-actions">
+                            <a href="../../Artistas/Everthon/index.html" class="btn btn-sm btn-accent w-full">Ver Perfil</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -246,81 +228,13 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M9 18V5L21 3V16M9 18C9 19.6569 7.65685 21 6 21C4.34315 21 3 19.6569 3 18C3 16.3431 4.34315 15 6 15C7.65685 15 9 16.3431 9 18ZM21 16C21 17.6569 19.6569 19 18 19C16.3431 19 15 17.6569 15 16C15 14.3431 16.3431 13 18 13C19.6569 13 21 14.3431 21 16Z" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <div class="logo-text">
-                            <div class="logo-title">Studio Bragi</div>
-                            <div class="logo-subtitle">Music Production</div>
-                        </div>
-                    </div>
-                    <p class="footer-description">Transformando eventos em experiências musicais inesquecíveis desde 2018.</p>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-title">Links Rápidos</h4>
-                    <ul class="footer-links">
-                        <li><a href="../../index.html">Início</a></li>
-                        <li><a href="../../index.html#artistas">Artistas</a></li>
-                        <li><a href="../../index.html#producoes">Produções</a></li>
-                        <li><a href="../../index.html#servicos">Serviços</a></li>
-                        <li><a href="../../index.html#sobre">Sobre Nós</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-title">Contato</h4>
-                    <ul class="footer-contact">
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7293C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.147 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5341 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.09501 3.90347 2.12788 3.62476 2.21649 3.36162C2.30511 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.0498 2.28271 3.30379 2.17052C3.55777 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.5953 1.99522 8.06579 2.16708 8.43376 2.48353C8.80173 2.79999 9.04207 3.23945 9.10999 3.72C9.23662 4.68007 9.47144 5.62273 9.80999 6.53C9.94454 6.88792 9.97366 7.27691 9.8939 7.65088C9.81415 8.02485 9.62886 8.36811 9.35999 8.64L8.08999 9.91C9.51355 12.4135 11.5864 14.4864 14.09 15.91L15.36 14.64C15.6319 14.3711 15.9751 14.1858 16.3491 14.1061C16.7231 14.0263 17.1121 14.0555 17.47 14.19C18.3773 14.5286 19.3199 14.7634 20.28 14.89C20.7658 14.9585 21.2094 15.2032 21.5265 15.5775C21.8437 15.9518 22.0122 16.4296 22 16.92Z" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            (21) 98725-2542
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M22 6L12 13L2 6" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            contato@studiobragi.com
-                        </li>
-                        <li>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            Rio de Janeiro, RJ - Brasil
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-title">Redes Sociais</h4>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/studiobragi/" class="footer-social-icon" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="18" cy="6" r="1" fill="currentColor"/>
-                            </svg>
-                        </a>
-
-                                                <a href="https://www.youtube.com/@studiobragi" class="social-icon" target="_blank">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23.498 6.186a2.997 2.997 0 0 0-2.112-2.12C19.67 3.5 12 3.5 12 3.5s-7.67 0-9.386.566a2.997 2.997 0 0 0-2.112 2.12A31.01 31.01 0 0 0 .5 12a31.01 31.01 0 0 0 .002 5.814 2.997 2.997 0 0 0 2.112 2.12C4.33 20.5 12 20.5 12 20.5s7.67 0 9.386-.566a2.997 2.997 0 0 0 2.112-2.12A31.01 31.01 0 0 0 23.5 12a31.01 31.01 0 0 0-.002-5.814zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
-                        </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Studio Bragi. Todos os direitos reservados.</p>
+                <p>&copy; 2026 Studio Bragi. Todos os direitos reservados. Projetado para o futuro.</p>
             </div>
         </div>
     </footer>
 
-    <script src="pinduka.js"></script>
+    <!-- Use Main Script -->
+    <script src="../../script.js"></script>
 </body>
 </html>

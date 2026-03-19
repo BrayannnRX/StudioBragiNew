@@ -2,7 +2,7 @@
 // DETECÇÃO DE HASH NA URL (NOVO!)
 // ==========================================
 // Detecta se veio de outra página com hash e rola até a seção
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     if (window.location.hash) {
         const section = document.querySelector(window.location.hash);
         if (section) {
@@ -76,16 +76,16 @@ document.querySelectorAll('.artist-card').forEach(card => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
+
         const rotateX = (y - centerY) / 20;
         const rotateY = (centerX - x) / 20;
-        
+
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
     });
-    
+
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
     });
@@ -93,20 +93,20 @@ document.querySelectorAll('.artist-card').forEach(card => {
 
 // Adicionar efeito de ripple nos botões
 const addRippleEffect = (button) => {
-    button.addEventListener('click', function(e) {
+    button.addEventListener('click', function (e) {
         const ripple = document.createElement('span');
         const rect = this.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
         const x = e.clientX - rect.left - size / 2;
         const y = e.clientY - rect.top - size / 2;
-        
+
         ripple.style.width = ripple.style.height = size + 'px';
         ripple.style.left = x + 'px';
         ripple.style.top = y + 'px';
         ripple.classList.add('ripple');
-        
+
         this.appendChild(ripple);
-        
+
         setTimeout(() => {
             ripple.remove();
         }, 600);
@@ -149,12 +149,12 @@ window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroContent = document.querySelector('.artist-hero-content');
     const heroBg = document.querySelector('.artist-hero-bg');
-    
+
     if (heroContent && scrolled < window.innerHeight) {
         heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
         heroContent.style.opacity = `${1 - scrolled / 500}`;
     }
-    
+
     if (heroBg && scrolled < window.innerHeight) {
         heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
@@ -166,7 +166,7 @@ if (contactCard) {
     contactCard.style.opacity = '0';
     contactCard.style.transform = 'translateX(50px)';
     contactCard.style.transition = 'all 0.8s ease';
-    
+
     const contactObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -175,7 +175,7 @@ if (contactCard) {
             }
         });
     }, { threshold: 0.2 });
-    
+
     contactObserver.observe(contactCard);
 }
 
@@ -184,7 +184,7 @@ document.querySelectorAll('.ideal-item').forEach((item, index) => {
     item.style.opacity = '0';
     item.style.transform = 'translateX(-20px)';
     item.style.transition = `all 0.5s ease ${index * 0.1}s`;
-    
+
     const idealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -193,7 +193,7 @@ document.querySelectorAll('.ideal-item').forEach((item, index) => {
             }
         });
     }, { threshold: 0.3 });
-    
+
     idealObserver.observe(item);
 });
 
@@ -273,7 +273,7 @@ function generateRandomArtistCards() {
     // Detecta qual artista está sendo exibido pela pasta
     const currentPath = window.location.pathname.toLowerCase();
     let currentArtist = null;
-    
+
     // Identifica o artista atual pela pasta
     for (const [name, data] of Object.entries(artistData)) {
         if (currentPath.includes(`/${data.folder.toLowerCase()}/`)) {
