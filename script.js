@@ -16,7 +16,7 @@ const configArtistas = {
     "Everthon": true,
     "Danit": false,
     "Fabao": false,
-    "Nuylly": false,
+    "Nuylly": true,
     "Pinduka": false,
     "Raymel": false,
     "Viktor": false
