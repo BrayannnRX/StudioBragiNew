@@ -129,11 +129,11 @@ body {
         --logo-size: 40px;
         --logo-padding: 4px;
     }
-    
+
     .logo-title {
         font-size: 1.1rem;
     }
-    
+
     .logo-subtitle {
         font-size: 0.7rem;
     }
@@ -232,11 +232,14 @@ body {
 
 /* Artist Hero Section */
 .artist-hero {
-    height: var(--hero-height, 90vh); /* ✅ altura ajustável */
+    height: var(--hero-height, 90vh);
+    /* ✅ altura ajustável */
     display: flex;
-    align-items: flex-end; /* ✅ deixa o conteúdo mais baixo */
+    align-items: flex-end;
+    /* ✅ deixa o conteúdo mais baixo */
     justify-content: center;
-    padding-bottom: var(--hero-content-offset, 80px); /* ✅ offset manual */
+    padding-bottom: var(--hero-content-offset, 80px);
+    /* ✅ offset manual */
     position: relative;
     overflow: hidden;
 }
@@ -245,9 +248,11 @@ body {
 .artist-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: var(--hero-image, url('lynna.jpg')); /* ✅ imagem variável */
+    background-image: var(--hero-image, url('lynna.jpeg'));
+    /* ✅ imagem variável */
     background-size: cover;
-    background-position: center -290px; /* ✅ posição ajustável */
+    background-position: center -290px;
+    /* ✅ posição ajustável */
     background-repeat: no-repeat;
     filter: brightness(0.45);
 }
@@ -257,11 +262,9 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.9) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, 0.9) 100%);
 }
 
 .artist-hero-content {
@@ -327,16 +330,19 @@ body {
     padding: 6rem 0;
     background-color: #0F0F0F;
 }
+
 .details-grid {
     display: grid;
     grid-template-columns: 1fr 400px;
     gap: 3rem;
 }
+
 .details-left {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
+
 .detail-card {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -344,35 +350,42 @@ body {
     padding: 2rem;
     transition: all 0.3s ease;
 }
+
 .detail-card:hover {
     border-color: rgba(16, 185, 129, 0.3);
     transform: translateY(-3px);
 }
+
 .detail-title {
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 1.25rem;
     color: #FFFFFF;
 }
+
 .detail-text {
     font-size: 1.05rem;
     color: #9CA3AF;
     line-height: 1.8;
 }
+
 /* Music Container Styles */
 .music-container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
+
 .soundcloud-player {
     width: 100%;
     border-radius: 8px;
     overflow: hidden;
 }
+
 .soundcloud-player iframe {
     display: block;
 }
+
 .spotify-card {
     display: flex;
     background: #ffffffef;
@@ -383,11 +396,13 @@ body {
     color: #1db954;
     height: 166px;
 }
+
 .spotify-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(29, 185, 84, 0.3);
     border-color: #1ed760;
 }
+
 .spotify-album-cover {
     width: 166px;
     height: 166px;
@@ -398,11 +413,13 @@ body {
     justify-content: center;
     overflow: hidden;
 }
+
 .spotify-album-cover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .spotify-info {
     flex: 1;
     padding: 20px;
@@ -413,12 +430,15 @@ body {
     gap: 8px;
     text-align: center;
 }
+
 .spotify-icon {
     margin-bottom: 4px;
 }
+
 .spotify-text {
     width: 100%;
 }
+
 .spotify-title {
     font-size: 18px;
     font-weight: 700;
@@ -427,6 +447,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     letter-spacing: -0.3px;
 }
+
 .spotify-artist {
     font-size: 16px;
     color: #666666;
@@ -434,6 +455,7 @@ body {
     font-weight: 500;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
+
 .spotify-cta {
     font-size: 14px;
     font-weight: 700;
@@ -443,16 +465,17 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     letter-spacing: -0.3px;
 }
+
 @media (max-width: 600px) {
     .spotify-card {
         flex-direction: column;
         height: auto;
     }
-    
+
     .spotify-album-cover {
         width: 100%;
     }
-    
+
     .spotify-info {
         padding: 20px;
     }
@@ -551,7 +574,8 @@ body {
     margin-bottom: 2rem;
 }
 
-.btn-whatsapp, .btn-instagram {
+.btn-whatsapp,
+.btn-instagram {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -686,8 +710,10 @@ body {
 .artist-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;      /* mantém proporção sem distorcer */
-    object-position: center; /* foca no centro da imagem */
+    object-fit: cover;
+    /* mantém proporção sem distorcer */
+    object-position: center;
+    /* foca no centro da imagem */
     display: block;
     transition: transform 0.5s ease;
 }
